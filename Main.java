@@ -43,7 +43,7 @@ public class Main {
             }
         }
     }
-
+//prints game board with "O" symbol as ship segment
     static void printUserGrid(char[][] array) {
         System.out.println("  1 2 3 4 5 6 7 8 9 10");
         char letter = 'A';
@@ -92,6 +92,7 @@ public class Main {
         int[] rowNbr = new int[]{0, -1, 0, 1};
         int[] colNbr = new int[]{-1, 0, 1, 0};
         boolean isClose = false;
+        //loop skips iterations that checks outside the board
         for (int i = 0; i < 4; i++) {
             if (row1 == 0 && column1 == 0 || row2 == 0 && column2 == 0 && (i == 0 || i == 1)) {
                 continue;
@@ -327,6 +328,7 @@ public class Main {
                     break;
             }
         }
+        //helth of ships for player 1 and 2
         int[] shipsHealthPlayer1 = {5, 4, 3, 3, 2};
         int[] shipsHealthPlayer2 = {5, 4, 3, 3, 2};
         int turn = 1;
